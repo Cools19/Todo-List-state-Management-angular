@@ -1,0 +1,18 @@
+.todos {
+    padding: 0;
+    width: 15em;
+}
+.todos li {
+    background-color: beige;
+    color: brown;
+    padding: 4px;
+    margin: 5px 20px;
+}
+.cross {
+    float: right;
+    background-color: red;
+    padding: 0px 5pc 0px 5px;
+    border-radius: 5%;
+    cursor: pointer;
+    color: wheat;
+}
