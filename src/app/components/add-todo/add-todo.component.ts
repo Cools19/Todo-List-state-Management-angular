@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { TodoAdd } from 'src/app/action/todo.action';
+import { TodoAdd } from 'src/app/action/todo.actions';
 import { Todo } from 'src/app/models/Todo';
 
 @Component({
@@ -10,10 +10,13 @@ import { Todo } from 'src/app/models/Todo';
 })
 export class AddTodoComponent implements OnInit {
   constructor(private store: Store<{ todos: Todo[] }>) {}
-  AddTodo(todo: string) {
+
+
+ AddTodo(todo: string) {
     const newTodo = new Todo();
     newTodo.title = todo;
     this.store.dispatch(new TodoAdd(newTodo));
+    
   }
 
   ngOnInit(): void {}
